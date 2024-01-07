@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Week 5: Errors, Logging, Fetching and Caching | MAD9124</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Full-stack: API Development">
+    
+    <link rel="preload" href="/w2024/assets/css/0.styles.39524780.css" as="style"><link rel="preload" href="/w2024/assets/js/app.fc6e01eb.js" as="script"><link rel="preload" href="/w2024/assets/js/3.22a9a734.js" as="script"><link rel="preload" href="/w2024/assets/js/32.7665dc23.js" as="script"><link rel="preload" href="/w2024/assets/js/16.4b2ad6cc.js" as="script"><link rel="prefetch" href="/w2024/assets/js/10.c93fc719.js"><link rel="prefetch" href="/w2024/assets/js/11.a5fd6648.js"><link rel="prefetch" href="/w2024/assets/js/12.e51dda20.js"><link rel="prefetch" href="/w2024/assets/js/13.14689ebd.js"><link rel="prefetch" href="/w2024/assets/js/14.10c849cb.js"><link rel="prefetch" href="/w2024/assets/js/15.c7f152ea.js"><link rel="prefetch" href="/w2024/assets/js/17.b0f53de1.js"><link rel="prefetch" href="/w2024/assets/js/18.c9019258.js"><link rel="prefetch" href="/w2024/assets/js/19.e99df46f.js"><link rel="prefetch" href="/w2024/assets/js/2.73e5c5a3.js"><link rel="prefetch" href="/w2024/assets/js/20.0d26532e.js"><link rel="prefetch" href="/w2024/assets/js/21.b650d14f.js"><link rel="prefetch" href="/w2024/assets/js/22.ab65458d.js"><link rel="prefetch" href="/w2024/assets/js/23.b5c56815.js"><link rel="prefetch" href="/w2024/assets/js/24.f2d8d65d.js"><link rel="prefetch" href="/w2024/assets/js/25.f614dfc2.js"><link rel="prefetch" href="/w2024/assets/js/26.0a746c62.js"><link rel="prefetch" href="/w2024/assets/js/27.7c5675a5.js"><link rel="prefetch" href="/w2024/assets/js/28.b90c4c36.js"><link rel="prefetch" href="/w2024/assets/js/29.61349fd2.js"><link rel="prefetch" href="/w2024/assets/js/30.294cf6eb.js"><link rel="prefetch" href="/w2024/assets/js/31.15fc99cd.js"><link rel="prefetch" href="/w2024/assets/js/33.c3cc0918.js"><link rel="prefetch" href="/w2024/assets/js/34.d1e0bb46.js"><link rel="prefetch" href="/w2024/assets/js/35.b5fcd5a0.js"><link rel="prefetch" href="/w2024/assets/js/36.dc2f21d1.js"><link rel="prefetch" href="/w2024/assets/js/37.e262e726.js"><link rel="prefetch" href="/w2024/assets/js/38.1bece248.js"><link rel="prefetch" href="/w2024/assets/js/39.fcdd0ec0.js"><link rel="prefetch" href="/w2024/assets/js/4.72abfff5.js"><link rel="prefetch" href="/w2024/assets/js/40.d41c0f26.js"><link rel="prefetch" href="/w2024/assets/js/41.e8d58b98.js"><link rel="prefetch" href="/w2024/assets/js/5.e2938391.js"><link rel="prefetch" href="/w2024/assets/js/6.89f9c161.js"><link rel="prefetch" href="/w2024/assets/js/7.77ddd75a.js"><link rel="prefetch" href="/w2024/assets/js/8.590c766b.js"><link rel="prefetch" href="/w2024/assets/js/9.ec84eb99.js">
+    <link rel="stylesheet" href="/w2024/assets/css/0.styles.39524780.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/w2024/" class="home-link router-link-active"><!----> <span class="site-name">MAD9124</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/w2024/overview/" class="nav-link">
+  Overview
+</a></div><div class="nav-item"><a href="/w2024/modules/" class="nav-link router-link-active">
+  Modules
+</a></div><div class="nav-item"><a href="/w2024/deliverables/" class="nav-link">
+  Deliverables
+</a></div><div class="nav-item"><a href="/w2024/resources/" class="nav-link">
+  Resources
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/w2024/overview/" class="nav-link">
+  Overview
+</a></div><div class="nav-item"><a href="/w2024/modules/" class="nav-link router-link-active">
+  Modules
+</a></div><div class="nav-item"><a href="/w2024/deliverables/" class="nav-link">
+  Deliverables
+</a></div><div class="nav-item"><a href="/w2024/resources/" class="nav-link">
+  Resources
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Introduction</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Content Modules</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/w2024/modules/" aria-current="page" class="sidebar-link">Table of contents</a></li><li><a href="/w2024/modules/week1/" class="sidebar-link">Week 1: Introduction &amp; Review</a></li><li><a href="/w2024/modules/week2/" class="sidebar-link">Week 2: Node Modules &amp; Express</a></li><li><a href="/w2024/modules/week3/" class="sidebar-link">Week 3: APIs</a></li><li><a href="/w2024/modules/week4/" class="sidebar-link">Week 4: Building RESTful APIs with Express</a></li><li><a href="/w2024/modules/week5/" aria-current="page" class="active sidebar-link">Week 5: Errors, Logging, Fetching and Caching</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/w2024/modules/week5/#agenda" class="sidebar-link">Agenda</a></li></ul></li><li><a href="/w2024/modules/week6/" class="sidebar-link">Week 7: Midterm Project</a></li><li><a href="/w2024/modules/week7/" class="sidebar-link">Week 7: Middleware</a></li><li><a href="/w2024/modules/break-week/" class="sidebar-link">Break Week</a></li><li><a href="/w2024/modules/week9/" class="sidebar-link">Week 9: Data Persitance and MongoDB</a></li><li><a href="/w2024/modules/week10/" class="sidebar-link">Week 10: Object Data Modelling with Mongoose</a></li><li><a href="/w2024/modules/week11/" class="sidebar-link">Week 11: Data Santization, XSS and LoggingS</a></li><li><a href="/w2024/modules/week12/" class="sidebar-link">Week 12: Authentication With Passport</a></li><li><a href="/w2024/modules/week13/" class="sidebar-link">Week 13: Testing with Jest</a></li><li><a href="/w2024/modules/week14/" class="sidebar-link">Week 14: Preparing for Production</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1><span class="week">Week 5</span><br> <span class="title">Errors, Logging, Fetching and Caching</span></h1> <h2 id="agenda"><a href="#agenda" class="header-anchor">#</a> Agenda</h2> <ul><li>AMA (15 min)</li> <li>Error handling</li> <li>Logging</li> <li>Fetching data from another source</li> <li>Caching</li> <li>Redis</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/1/2024, 3:55:17 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/w2024/modules/week4/" class="prev">
+        Week 4: Building RESTful APIs with Express
+      </a></span> <span class="next"><a href="/w2024/modules/week6/">
+        Week 7: Midterm Project
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/w2024/assets/js/app.fc6e01eb.js" defer></script><script src="/w2024/assets/js/3.22a9a734.js" defer></script><script src="/w2024/assets/js/32.7665dc23.js" defer></script><script src="/w2024/assets/js/16.4b2ad6cc.js" defer></script>
+  </body>
+</html>
